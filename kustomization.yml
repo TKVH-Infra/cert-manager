@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: cert-manager
+resources:
+  - https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
+  - letsencrypt-issuer.yml
+  - wildcard-cert.yml
+  - vault-issuer.yml
+  - wildcard-cert-internal.yml
