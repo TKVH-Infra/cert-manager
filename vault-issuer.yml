@@ -5,7 +5,7 @@ metadata:
   name: cert-manager-vault
   namespace: cert-manager
 data:
-  secretId: "<path:apps-kv/data/cert-manager/config#secretId_b64>"
+  secretId: Njk3ZDZjMDAtNjc3My1hZmQzLWVkZjItNWI3NzFhMzQ2OWQ4Cg==
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -19,7 +19,7 @@ spec:
     auth:
       appRole:
         path: approle
-        roleId: "<path:apps-kv/data/cert-manager/config#roleId>"
+        roleId: 803208be-e10e-b9c6-8a66-a6110c04a9af
         secretRef:
           name: cert-manager-vault
           key: secretId

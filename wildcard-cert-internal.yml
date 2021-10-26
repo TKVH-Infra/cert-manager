@@ -2,21 +2,22 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: wildcard-internal
+  namespace: cert-manager
 spec:
   secretName: wildcard-internal-tls
   secretTemplate:
     labels:
-      part-of: <path:apps-kv/data/cert-manager/config#HOST>
+      part-of: home.lan
   duration: 2160h
   renewBefore: 360h
   privateKey:
     algorithm: RSA
     encoding: PKCS1
     size: 4096
-  commonName: <path:apps-kv/data/cert-manager/config#HOST>
+  commonName: home.lan
   dnsNames:
-    - '*.<path:apps-kv/data/cert-manager/config#HOST>'
-    - '<path:apps-kv/data/cert-manager/config#HOST>'
+    - '*.home.lan'
+    - 'home.lan'
   issuerRef:
     name: vault
     kind: ClusterIssuer
