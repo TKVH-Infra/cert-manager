@@ -6,3 +6,5 @@ resources:
   - wildcard-cert.yml
   - vault-issuer.yml
   - wildcard-cert-internal.yml
+patches:
+  - cert-manager-ns-patch.yml
