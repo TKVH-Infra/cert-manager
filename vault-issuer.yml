@@ -5,7 +5,7 @@ metadata:
   name: cert-manager-vault
   namespace: cert-manager
 data:
-  secretId: Njk3ZDZjMDAtNjc3My1hZmQzLWVkZjItNWI3NzFhMzQ2OWQ4Cg==
+  secretId: YjVlNTE1MjgtZWJkMC05Y2FiLTQ4NGEtNzY0ZGYyZTRlNTMyCg==
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
