@@ -7,7 +7,7 @@ spec:
   secretName: wildcard-tls
   secretTemplate:
     labels:
-      part-of: <path:apps-kv/data/cert-manager/config#HOST2>
+      part-of: <path:apps-kv/data/general#DN>
   duration: 2160h
   renewBefore: 360h
   privateKey:
@@ -15,8 +15,8 @@ spec:
     encoding: PKCS1
     size: 4096
   dnsNames:
-    - '*.<path:apps-kv/data/cert-manager/config#HOST2>'
-    - '<path:apps-kv/data/cert-manager/config#HOST2>'
+    - '*.<path:apps-kv/data/general#DN>'
+    - '<path:apps-kv/data/general#DN>'
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
